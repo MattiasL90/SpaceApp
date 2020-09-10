@@ -1,0 +1,18 @@
+<mat-card *ngIf="!!marsPictures">
+    <mat-card-header>
+        <mat-card-title> {{ marsPictures.photos[imgOrder].rover.name }} </mat-card-title>
+        <mat-card-subtitle> {{ marsPictures.photos[imgOrder].earth_date }} </mat-card-subtitle>
+    </mat-card-header>
+    <div>
+        <img mat-card-image id="marsImg" src="{{ marsPictures.photos[imgOrder].img_src }}">
+    </div>
+    <mat-card-content>
+        <p>
+            Sol: {{ marsPictures.photos[imgOrder].sol }}
+        </p>
+    </mat-card-content>
+    <mat-card-actions id="cardActionBar">
+        <button id="prevBtn" mat-raised-button color="primary" *ngIf="imgOrder !== 0" (click)="previousImg()">Previous img</button>
+        <button id="nextBtn" mat-raised-button color="accent" (click)="nextImg()">Next img</button>
+    </mat-card-actions>
+</mat-card>
