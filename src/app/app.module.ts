@@ -19,6 +19,8 @@ import { MarsCardComponent } from './mars-card/mars-card.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MarsWeatherComponent } from './mars-weather/mars-weather.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { AsteroidsComponent } from './asteroids/asteroids.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     TopNavComponent,
     MarsComponent,
     MarsCardComponent,
-    MarsWeatherComponent
+    MarsWeatherComponent,
+    AsteroidsComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatCardModule,
     MatButtonModule,
     MatExpansionModule,
-    CommonModule
+    CommonModule,
+    MatProgressSpinnerModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
